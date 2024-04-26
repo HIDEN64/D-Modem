@@ -286,7 +286,7 @@ int test_main(void)
 		   rc);
 	goto on_return;
     }
-    tsx_test[tsx_test_cnt].port = 5060;
+    tsx_test[tsx_test_cnt].port = 16555;
     tsx_test[tsx_test_cnt].tp_type = "loop-dgram";
     tsx_test[tsx_test_cnt].type = PJSIP_TRANSPORT_LOOP_DGRAM;
     ++tsx_test_cnt;

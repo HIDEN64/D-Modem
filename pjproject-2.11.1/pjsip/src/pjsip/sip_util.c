@@ -1652,7 +1652,7 @@ PJ_DEF(pj_status_t) pjsip_get_response_addr( pj_pool_t *pool,
 		   &rdata->msg_info.via->maddr_param);
 	res_addr->dst_host.addr.port = rdata->msg_info.via->sent_by.port;
 	if (res_addr->dst_host.addr.port == 0)
-	    res_addr->dst_host.addr.port = 5060;
+	    res_addr->dst_host.addr.port = 16555;
 
     } else if (rdata->msg_info.via->rport_param >= 0) {
 	/* There is both a "received" parameter and an "rport" parameter, 

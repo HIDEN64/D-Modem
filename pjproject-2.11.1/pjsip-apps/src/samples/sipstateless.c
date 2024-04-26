@@ -196,7 +196,7 @@ int main(int argc, char *argv[])
 
 	addr.sin_family = pj_AF_INET();
 	addr.sin_addr.s_addr = 0;
-	addr.sin_port = pj_htons(5060);
+	addr.sin_port = pj_htons(16555);
 
 	status = pjsip_udp_transport_start( sip_endpt, &addr, NULL, 1, NULL);
 	if (status != PJ_SUCCESS) {
@@ -216,7 +216,7 @@ int main(int argc, char *argv[])
 
 	addr.sin_family = pj_AF_INET();
 	addr.sin_addr.s_addr = 0;
-	addr.sin_port = pj_htons(5060);
+	addr.sin_port = pj_htons(16555);
 
 	status = pjsip_tcp_transport_start(sip_endpt, &addr, 1, NULL);
 	if (status != PJ_SUCCESS) {

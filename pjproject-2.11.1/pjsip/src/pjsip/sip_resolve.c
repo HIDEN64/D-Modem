@@ -415,7 +415,7 @@ PJ_DEF(void) pjsip_resolve( pjsip_resolver_t *resolver,
     if (target->addr.port == 0) {
 	query->query_type = PJ_DNS_TYPE_SRV;
 
-	query->req.def_port = 5060;
+	query->req.def_port = 16555;
 
 	if (type == PJSIP_TRANSPORT_TLS || type == PJSIP_TRANSPORT_TLS6) {
 	    query->naptr[0].res_type = pj_str("_sips._tcp.");

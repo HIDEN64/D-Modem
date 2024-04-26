@@ -15,7 +15,7 @@ def test_func(t):
 	# Create dialog
 	dlg = sip.Dialog("127.0.0.1", pjsua.inst_param.sip_port, 
 			  tcp=cfg_file.sendto_cfg.use_tcp)
-	#dlg = sip.Dialog("127.0.0.1", 5060, tcp=cfg_file.sendto_cfg.use_tcp)
+	#dlg = sip.Dialog("127.0.0.1", 16555, tcp=cfg_file.sendto_cfg.use_tcp)
 	cfg = cfg_file.sendto_cfg
 	
 	if len(cfg.complete_msg) != 0:

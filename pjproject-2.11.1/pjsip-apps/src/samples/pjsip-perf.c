@@ -771,7 +771,7 @@ static pj_status_t init_sip()
 
 	if (app.local_addr.slen) {
 	    addrname.host = app.local_addr;
-	    addrname.port = 5060;
+	    addrname.port = 16555;
 	} 
 	if (app.local_port != 0)
 	    addrname.port = app.local_port;
@@ -1142,7 +1142,7 @@ static void usage(void)
 	"                           proper SDP negotiation [default: dummy]\n"
 	"\n"
 	"Client and Server options:\n"
-	"   --local-port=PORT, -p   Set local port [default: 5060]\n"
+	"   --local-port=PORT, -p   Set local port [default: 16555]\n"
 	"   --use-tcp, -T           Use TCP instead of UDP. Note that when started as\n"
 	"                           client, you must add ;transport=tcp parameter to URL\n"
 	"                           [default: no]\n"
@@ -1194,7 +1194,7 @@ static pj_status_t init_options(int argc, char *argv[])
     int option_index;
 
     /* Init default application configs */
-    app.local_port = 5060;
+    app.local_port = 16555;
     app.thread_count = 1;
     app.client.job_count = DEFAULT_COUNT;
     app.client.method = *pjsip_get_options_method();

@@ -6,7 +6,7 @@ import inc_sdp as sdp
 #
 complete_msg = \
 """INVITE sip:localhost SIP/2.0
-Via: SIP/2.0/UDP 192.168.0.14:5060;rport;branch=z9hG4bKPj9db9
+Via: SIP/2.0/UDP 192.168.0.14:16555;rport;branch=z9hG4bKPj9db9
 Max-Forwards: 70
 From: <sip:192.168.0.14>;tag=08cd5bfc2d8a4fddb1f5e59c6961d298
 To: <sip:localhost>

@@ -61,7 +61,7 @@ struct ipjsua_swiftApp: App {
         var transport_id = pjsua_transport_id();
         var tcp_cfg = pjsua_transport_config();
         pjsua_transport_config_default(&tcp_cfg);
-        tcp_cfg.port = 5060;
+        tcp_cfg.port = 16555;
         status = pjsua_transport_create(PJSIP_TRANSPORT_TCP,
                                         &tcp_cfg, &transport_id);
 

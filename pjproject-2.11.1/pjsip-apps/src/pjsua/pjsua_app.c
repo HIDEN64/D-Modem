@@ -1688,7 +1688,7 @@ static pj_status_t app_init(void)
 
 	udp_cfg = app_config.udp_cfg;
 	if (udp_cfg.port == 0)
-	    udp_cfg.port = 5060;
+	    udp_cfg.port = 16555;
 	else
 	    udp_cfg.port += 10;
 	status = pjsua_transport_create(type,

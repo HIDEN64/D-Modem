@@ -3892,7 +3892,7 @@ static PyObject *py_pj_parse_simple_sip(PyObject *pSelf, PyObject *pArgs)
     PyTuple_SetItem(ret, 2, item);
 
     /* Port */
-    if (sip_uri->port == 5060) {
+    if (sip_uri->port == 16555) {
 	sip_uri->port = 0;
     }
     item = Py_BuildValue("i", sip_uri->port);

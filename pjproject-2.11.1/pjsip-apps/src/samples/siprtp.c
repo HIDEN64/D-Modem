@@ -898,7 +898,7 @@ static pj_status_t init_options(int argc, char *argv[])
     /* Init defaults */
     app.max_calls = 1;
     app.thread_count = 1;
-    app.sip_port = 5060;
+    app.sip_port = 16555;
     app.rtp_start_port = RTP_START_PORT;
     app.local_addr = pj_str(ip_addr);
     app.log_level = 5;

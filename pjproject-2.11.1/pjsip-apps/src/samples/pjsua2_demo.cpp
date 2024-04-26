@@ -192,7 +192,7 @@ static void mainProg1(Endpoint &ep)
 
     // Transport
     TransportConfig tcfg;
-    tcfg.port = 5060;
+    tcfg.port = 16555;
     ep.transportCreate(PJSIP_TRANSPORT_UDP, tcfg);
 
     // Start library
@@ -406,7 +406,7 @@ static void mainProg4(Endpoint &ep)
 
     // Create transport
     TransportConfig tcfg;
-    tcfg.port = 5060;
+    tcfg.port = 16555;
     ep.transportCreate(PJSIP_TRANSPORT_UDP, tcfg);
     ep.transportCreate(PJSIP_TRANSPORT_TCP, tcfg);
 

@@ -60,7 +60,7 @@ def get_header(msg, hname):
 class Dialog:
 	sock = None
 	dst_addr = ""
-	dst_port = 5060
+	dst_port = 16555
 	local_ip = ""
 	local_port = 0
 	tcp = False
@@ -72,7 +72,7 @@ class Dialog:
 	inv_branch = ""
 	trace_enabled = True
 	last_request = ""
-	def __init__(self, dst_addr, dst_port=5060, tcp=False, trace=True, local_port=0):
+	def __init__(self, dst_addr, dst_port=16555, tcp=False, trace=True, local_port=0):
 		self.dst_addr = dst_addr
 		self.dst_port = dst_port
 		self.tcp = tcp

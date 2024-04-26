@@ -3458,7 +3458,7 @@ pj_status_t pjsua_acc_get_uac_addr(pjsua_acc_id acc_id,
 	    pj_strdup(pool, &tdata.dest_info.name, &dinfo.addr.host);
 
 	    if (port==0) {
-		port = (dinfo.flag & PJSIP_TRANSPORT_SECURE) ? 5061 : 5060;
+		port = (dinfo.flag & PJSIP_TRANSPORT_SECURE) ? 5061 : 16555;
 	    }
 	    pj_sockaddr_set_port(&ai.ai_addr, port);
 	    status = pjsip_endpt_acquire_transport2(pjsua_var.endpt,

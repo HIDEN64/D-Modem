@@ -199,14 +199,14 @@ static struct transport_names_t
     },
     { 
 	PJSIP_TRANSPORT_UDP, 
-	5060, 
+	16555, 
 	{"UDP", 3}, 
 	"UDP transport", 
 	PJSIP_TRANSPORT_DATAGRAM
     },
     { 
 	PJSIP_TRANSPORT_TCP, 
-	5060, 
+	16555, 
 	{"TCP", 3}, 
 	"TCP transport", 
 	PJSIP_TRANSPORT_RELIABLE
@@ -227,7 +227,7 @@ static struct transport_names_t
     },
     { 
 	PJSIP_TRANSPORT_SCTP, 
-	5060, 
+	16555, 
 	{"SCTP", 4}, 
 	"SCTP transport", 
 	PJSIP_TRANSPORT_RELIABLE
@@ -248,14 +248,14 @@ static struct transport_names_t
     },
     { 
 	PJSIP_TRANSPORT_UDP6, 
-	5060, 
+	16555, 
 	{"UDP", 3}, 
 	"UDP IPv6 transport", 
 	PJSIP_TRANSPORT_DATAGRAM
     },
     { 
 	PJSIP_TRANSPORT_TCP6, 
-	5060, 
+	16555, 
 	{"TCP", 3}, 
 	"TCP IPv6 transport", 
 	PJSIP_TRANSPORT_RELIABLE

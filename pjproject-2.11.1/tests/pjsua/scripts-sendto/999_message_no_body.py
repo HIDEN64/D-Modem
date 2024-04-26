@@ -6,13 +6,13 @@ import inc_sdp as sdp
 #
 complete_msg = \
 """MESSAGE sip:localhost SIP/2.0
-Via: SIP/2.0/UDP 192.168.0.14:5060;rport;branch=z9hG4bKPj9db9
+Via: SIP/2.0/UDP 192.168.0.14:16555;rport;branch=z9hG4bKPj9db9
 Max-Forwards: 70
 From: <sip:192.168.0.14>;tag=08cd5bfc2d8a4fddb1f5e59c6961d298
 To: <sip:localhost>
 Call-ID: 3373d9eb32aa458db7e69c7ea51e0bd7
 CSeq: 23809 MESSAGE
-Contact: <sip:192.168.0.14:5060>
+Contact: <sip:192.168.0.14:16555>
 User-Agent: PJSUA v0.8.0-trunk/win32
 Content-Type: text/plain
 Content-Length: 50

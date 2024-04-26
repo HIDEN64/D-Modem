@@ -8,10 +8,10 @@ import inc_sdp as sdp
 # cause pjsip to respond with 500 and then second request will cause
 # segfault.
 complete_msg = \
-"""INVITE sip:5001@192.168.1.200:5060;transport=UDP SIP/2.0
-Via: SIP/2.0/UDP 192.168.1.11:5060;branch=z9hG4bK74a60ee5;rport
+"""INVITE sip:5001@192.168.1.200:16555;transport=UDP SIP/2.0
+Via: SIP/2.0/UDP 192.168.1.11:16555;branch=z9hG4bK74a60ee5;rport
 From: \"A user\" <sip:66660000@192.168.1.11>;tag=as2858a32c
-To: <sip:5001@192.168.1.200:5060;transport=UDP>
+To: <sip:5001@192.168.1.200:16555;transport=UDP>
 Contact: <sip:66660000@192.168.1.11>
 Call-ID: 0bc7612c665e875a4a46411442b930a6@192.168.1.11
 CSeq: 102 INVITE

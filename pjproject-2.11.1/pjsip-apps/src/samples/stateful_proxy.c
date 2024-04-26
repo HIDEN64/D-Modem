@@ -510,7 +510,7 @@ int main(int argc, char *argv[])
 {
     pj_status_t status;
 
-    global.port = 5060;
+    global.port = 16555;
     global.record_route = 0;
 
     pj_log_set_level(4);

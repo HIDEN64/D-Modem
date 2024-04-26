@@ -178,7 +178,7 @@ int main(int argc, char *argv[])
 {
     pj_status_t status;
 
-    global.port = 5060;
+    global.port = 16555;
     pj_log_set_level(4);
 
     status = init_options(argc, argv);

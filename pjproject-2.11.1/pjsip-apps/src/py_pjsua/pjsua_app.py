@@ -24,7 +24,7 @@ C_STUN_HOST = ""
 #C_STUN_HOST = "stun.iptel.org:3478"
 
 # SIP port
-C_SIP_PORT = 5060
+C_SIP_PORT = 16555
 
 
 # Globals

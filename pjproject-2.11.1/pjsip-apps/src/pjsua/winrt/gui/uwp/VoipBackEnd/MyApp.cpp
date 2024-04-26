@@ -26,7 +26,7 @@ using namespace VoipBackEnd;
 using namespace Windows::Storage;
 
 const std::string CONFIG_NAME = "pjsua2.json";
-const int SIP_PORT  = 5060;
+const int SIP_PORT  = 16555;
 const int LOG_LEVEL = 5;
 const std::string THIS_FILE = "MyApp.cpp";
 
@@ -470,7 +470,7 @@ void MyAppRT::init(IntAccount^ iAcc, IntCall^ iCall)
     /* Create transports. */
 
     try {
-	sipTpConfig->port = 5060;
+	sipTpConfig->port = 16555;
 	ep.transportCreate(::pjsip_transport_type_e::PJSIP_TRANSPORT_TCP,
 			   *sipTpConfig);
     } catch (pj::Error& e) {

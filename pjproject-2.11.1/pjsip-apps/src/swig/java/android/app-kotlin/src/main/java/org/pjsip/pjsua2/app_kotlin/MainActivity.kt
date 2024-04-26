@@ -116,7 +116,7 @@ class MainActivity : AppCompatActivity() {
             /* Create transports and account. */
             try {
                 val sipTpConfig = TransportConfig()
-                sipTpConfig.port = 5060
+                sipTpConfig.port = 16555
                 g.ep.transportCreate(pjsip_transport_type_e.PJSIP_TRANSPORT_UDP,
                         sipTpConfig)
 

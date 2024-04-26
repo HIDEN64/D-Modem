@@ -76,7 +76,7 @@ static pj_bool_t on_rx_request( pjsip_rx_data *rdata );
 
 /* Globals */
 static int sip_af;
-static int sip_port = 5060;
+static int sip_port = 16555;
 static pj_bool_t sip_tcp;
 
 /* This is a PJSIP module to be registered by application to handle

@@ -51,7 +51,7 @@ static pjsua_buddy_id find_buddy(const pjsip_uri *uri)
 
 	if (pj_stricmp(&sip_uri->user, &b->name)==0 &&
 	    pj_stricmp(&sip_uri->host, &b->host)==0 &&
-	    (sip_uri->port==(int)b->port || (sip_uri->port==0 && b->port==5060)))
+	    (sip_uri->port==(int)b->port || (sip_uri->port==0 && b->port==16555)))
 	{
 	    /* Match */
 	    return i;
@@ -468,7 +468,7 @@ PJ_DEF(pj_status_t) pjsua_buddy_add( const pjsua_buddy_config *cfg,
     pjsua_var.buddy[index].port = sip_uri->port;
     pjsua_var.buddy[index].monitor = cfg->subscribe;
     if (pjsua_var.buddy[index].port == 0)
-	pjsua_var.buddy[index].port = 5060;
+	pjsua_var.buddy[index].port = 16555;
 
     /* Save user data */
     pjsua_var.buddy[index].user_data = (void*)cfg->user_data;

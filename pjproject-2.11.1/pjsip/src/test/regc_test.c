@@ -767,7 +767,7 @@ int regc_test(void)
 	    "immediate error",		    /* title		*/
 	    "sip:unresolved-host-xyy",	    /* alt_registrar	*/
 	    1,				    /* contact cnt	*/
-	    { "sip:user@127.0.0.1:5060" },  /* contacts[]	*/
+	    { "sip:user@127.0.0.1:16555" },  /* contacts[]	*/
 	    600,			    /* expires		*/
 
 	    /* registrar config: */
@@ -786,7 +786,7 @@ int regc_test(void)
 	    "timeout test (takes ~32 secs)",/* title		*/
 	    NULL,			    /* alt_registrar	*/
 	    1,				    /* contact cnt	*/
-	    { "sip:user@127.0.0.1:5060" },  /* contacts[]	*/
+	    { "sip:user@127.0.0.1:16555" },  /* contacts[]	*/
 	    600,			    /* expires		*/
 
 	    /* registrar config: */
@@ -809,7 +809,7 @@ int regc_test(void)
 	    "basic",			    /* title		*/
 	    NULL,			    /* alt_registrar	*/
 	    1,				    /* contact cnt	*/
-	    { "<sip:user@127.0.0.1:5060;transport=udp;x-param=1234>" },  /* contacts[]	*/
+	    { "<sip:user@127.0.0.1:16555;transport=udp;x-param=1234>" },  /* contacts[]	*/
 	    600,			    /* expires		*/
 
 	    /* registrar config: */
@@ -829,7 +829,7 @@ int regc_test(void)
 	    "authentication",		    /* title		*/
 	    NULL,			    /* alt_registrar	*/
 	    1,				    /* contact cnt	*/
-	    { "<sip:user@127.0.0.1:5060;transport=udp;x-param=1234>" },  /* contacts[]	*/
+	    { "<sip:user@127.0.0.1:16555;transport=udp;x-param=1234>" },  /* contacts[]	*/
 	    600,			    /* expires		*/
 
 	    /* registrar config: */
@@ -851,7 +851,7 @@ int regc_test(void)
 	    "more bindings in response",    /* title		*/
 	    NULL,			    /* alt_registrar	*/
 	    1,				    /* contact cnt	*/
-	    { "<sip:user@127.0.0.1:5060;transport=udp>" },  /* contacts[]	*/
+	    { "<sip:user@127.0.0.1:16555;transport=udp>" },  /* contacts[]	*/
 	    600,			    /* expires		*/
 
 	    /* registrar config: */
@@ -876,7 +876,7 @@ int regc_test(void)
 	    "registrar modifies Contact header",    /* title		*/
 	    NULL,			    /* alt_registrar	*/
 	    1,				    /* contact cnt	*/
-	    { "<sip:user@127.0.0.1:5060>" },  /* contacts[]	*/
+	    { "<sip:user@127.0.0.1:16555>" },  /* contacts[]	*/
 	    600,			    /* expires		*/
 
 	    /* registrar config: */
@@ -902,7 +902,7 @@ int regc_test(void)
 	    "registrar modifies Contact header and add bindings",    /* title		*/
 	    NULL,			    /* alt_registrar	*/
 	    1,				    /* contact cnt	*/
-	    { "<sip:user@127.0.0.1:5060>" },  /* contacts[]	*/
+	    { "<sip:user@127.0.0.1:16555>" },  /* contacts[]	*/
 	    600,			    /* expires		*/
 
 	    /* registrar config: */
@@ -926,7 +926,7 @@ int regc_test(void)
 	    "registrar replaces Contact header",    /* title		*/
 	    NULL,			    /* alt_registrar	*/
 	    1,				    /* contact cnt	*/
-	    { "<sip:user@127.0.0.1:5060>" },  /* contacts[]	*/
+	    { "<sip:user@127.0.0.1:16555>" },  /* contacts[]	*/
 	    600,			    /* expires		*/
 
 	    /* registrar config: */
@@ -950,7 +950,7 @@ int regc_test(void)
 	    " as above with additional bindings",    /* title		*/
 	    NULL,			    /* alt_registrar	*/
 	    1,				    /* contact cnt	*/
-	    { "<sip:user@127.0.0.1:5060>" },  /* contacts[]	*/
+	    { "<sip:user@127.0.0.1:16555>" },  /* contacts[]	*/
 	    600,			    /* expires		*/
 
 	    /* registrar config: */
@@ -972,7 +972,7 @@ int regc_test(void)
 	    "no Contact but with Expires",  /* title		*/
 	    NULL,			    /* alt_registrar	*/
 	    1,				    /* contact cnt	*/
-	    { "<sip:user@127.0.0.1:5060>" },  /* contacts[]	*/
+	    { "<sip:user@127.0.0.1:16555>" },  /* contacts[]	*/
 	    600,			    /* expires		*/
 
 	    /* registrar config: */
@@ -993,7 +993,7 @@ int regc_test(void)
 	    "no Contact and no Expires",    /* title		*/
 	    NULL,			    /* alt_registrar	*/
 	    1,				    /* contact cnt	*/
-	    { "<sip:user@127.0.0.1:5060>" },/* contacts[]	*/
+	    { "<sip:user@127.0.0.1:16555>" },/* contacts[]	*/
 	    600,			    /* expires		*/
 
 	    /* registrar config: */

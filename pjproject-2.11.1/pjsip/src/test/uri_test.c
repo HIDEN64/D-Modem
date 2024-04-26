@@ -109,12 +109,12 @@ struct uri_test
     },
     {
 	PJ_SUCCESS,
-	"sip:user:password@localhost:5060",
+	"sip:user:password@localhost:16555",
 	&create_uri2,    },
     {
 	/* Port is specified should not match unspecified port. */
 	ERR_NOT_EQUAL,
-	"sip:localhost:5060",
+	"sip:localhost:16555",
 	&create_uri3
     },
     {
@@ -389,13 +389,13 @@ static pjsip_uri *create_uri1(pj_pool_t *pool)
 
 static pjsip_uri *create_uri2(pj_pool_t *pool)
 {
-    /* "sip:user:password@localhost:5060" */
+    /* "sip:user:password@localhost:16555" */
     pjsip_sip_uri *url = pjsip_sip_uri_create(pool, 0);
 
     pj_strdup2( pool, &url->user, "user");
     pj_strdup2( pool, &url->passwd, "password");
     pj_strdup2( pool, &url->host, "localhost");
-    url->port = 5060;
+    url->port = 16555;
 
     return (pjsip_uri*) url;
 }

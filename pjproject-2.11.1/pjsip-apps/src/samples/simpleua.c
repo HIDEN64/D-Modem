@@ -74,7 +74,7 @@
 #define SIP_PORT	5080	     /* Listening SIP port		*/
 #define RTP_PORT	5000	     /* RTP port			*/
 #else
-#define SIP_PORT	5060	     /* Listening SIP port		*/
+#define SIP_PORT	16555	     /* Listening SIP port		*/
 #define RTP_PORT	4000	     /* RTP port			*/
 #endif
 

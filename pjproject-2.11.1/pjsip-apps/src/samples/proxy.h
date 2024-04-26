@@ -332,7 +332,7 @@ static pj_bool_t is_uri_local(const pjsip_sip_uri *uri)
     unsigned i;
     for (i=0; i<global.name_cnt; ++i) {
 	if ((uri->port == global.name[i].port ||
-	     (uri->port==0 && global.name[i].port==5060)) &&
+	     (uri->port==0 && global.name[i].port==16555)) &&
 	    pj_stricmp(&uri->host, &global.name[i].host)==0)
 	{
 	    /* Match */

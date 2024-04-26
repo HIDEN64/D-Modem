@@ -90,7 +90,7 @@ static void add_dns_entries(pj_dns_resolver *resv)
     ans[0].ttl = 3600;
     ans[0].rdata.srv.prio = 0;
     ans[0].rdata.srv.weight = 0;
-    ans[0].rdata.srv.port = 5060;
+    ans[0].rdata.srv.port = 16555;
     ans[0].rdata.srv.target = pj_str("sip01.example.com");
 
     ans[1].name = pj_str("_sip._udp.example.com");
@@ -99,7 +99,7 @@ static void add_dns_entries(pj_dns_resolver *resv)
     ans[1].ttl = 3600;
     ans[1].rdata.srv.prio = 0;
     ans[1].rdata.srv.weight = 20;
-    ans[1].rdata.srv.port = 5060;
+    ans[1].rdata.srv.port = 16555;
     ans[1].rdata.srv.target = pj_str("sip02.example.com");
 
     ans[2].name = pj_str("_sip._udp.example.com");
@@ -108,7 +108,7 @@ static void add_dns_entries(pj_dns_resolver *resv)
     ans[2].ttl = 3600;
     ans[2].rdata.srv.prio = 0;
     ans[2].rdata.srv.weight = 10;
-    ans[2].rdata.srv.port = 5060;
+    ans[2].rdata.srv.port = 16555;
     ans[2].rdata.srv.target = pj_str("sip03.example.com");
 
     ans[3].name = pj_str("_sip._udp.example.com");
@@ -117,7 +117,7 @@ static void add_dns_entries(pj_dns_resolver *resv)
     ans[3].ttl = 3600;
     ans[3].rdata.srv.prio = 1;
     ans[3].rdata.srv.weight = 0;
-    ans[3].rdata.srv.port = 5060;
+    ans[3].rdata.srv.port = 16555;
     ans[3].rdata.srv.target = pj_str("sip04.example.com");
 
     pj_dns_resolver_add_entry( resv, &pkt, PJ_FALSE);
@@ -554,21 +554,21 @@ int resolve_test(void)
     /* These all should be resolved as IP addresses (DNS A query) */
     {
 	pjsip_server_addresses ref;
-	create_ref(&ref, PJSIP_TRANSPORT_UDP, "1.1.1.1", 5060);
+	create_ref(&ref, PJSIP_TRANSPORT_UDP, "1.1.1.1", 16555);
 	status = test_resolve("IP address without transport and port", pool, PJSIP_TRANSPORT_UNSPECIFIED, "1.1.1.1", 0, &ref);
 	if (status != PJ_SUCCESS)
 	    return -100;
     }
     {
 	pjsip_server_addresses ref;
-	create_ref(&ref, PJSIP_TRANSPORT_UDP, "1.1.1.1", 5060);
-	status = test_resolve("IP address with explicit port", pool, PJSIP_TRANSPORT_UNSPECIFIED, "1.1.1.1", 5060, &ref);
+	create_ref(&ref, PJSIP_TRANSPORT_UDP, "1.1.1.1", 16555);
+	status = test_resolve("IP address with explicit port", pool, PJSIP_TRANSPORT_UNSPECIFIED, "1.1.1.1", 16555, &ref);
 	if (status != PJ_SUCCESS)
 	    return -110;
     }
     {
 	pjsip_server_addresses ref;
-	create_ref(&ref, PJSIP_TRANSPORT_TCP, "1.1.1.1", 5060);
+	create_ref(&ref, PJSIP_TRANSPORT_TCP, "1.1.1.1", 16555);
 	status = test_resolve("IP address without port (TCP)", pool, PJSIP_TRANSPORT_TCP,"1.1.1.1", 0, &ref);
 	if (status != PJ_SUCCESS)
 	    return -120;
@@ -584,8 +584,8 @@ int resolve_test(void)
     /* This should be resolved as DNS A record (because port is present) */
     {
 	pjsip_server_addresses ref;
-	create_ref(&ref, PJSIP_TRANSPORT_UDP, "5.5.5.5", 5060);
-	status = test_resolve("domain name with port should resolve to A record", pool, PJSIP_TRANSPORT_UNSPECIFIED, "example.com", 5060, &ref);
+	create_ref(&ref, PJSIP_TRANSPORT_UDP, "5.5.5.5", 16555);
+	status = test_resolve("domain name with port should resolve to A record", pool, PJSIP_TRANSPORT_UNSPECIFIED, "example.com", 16555, &ref);
 	if (status != PJ_SUCCESS)
 	    return -140;
     }
@@ -595,7 +595,7 @@ int resolve_test(void)
      */
     {
 	pjsip_server_addresses ref;
-	create_ref(&ref, PJSIP_TRANSPORT_UDP, "2.2.2.2", 5060);
+	create_ref(&ref, PJSIP_TRANSPORT_UDP, "2.2.2.2", 16555);
 	status = test_resolve("failure with SRV fallback to A record", pool, PJSIP_TRANSPORT_UNSPECIFIED, "sip02.example.com", 0, &ref);
 	if (status != PJ_SUCCESS)
 	    return -150;
